@@ -1,0 +1,43 @@
+Surround code blocks with ``` for proper formatting.
+
+
+
+
+
+
+Entirely new files MUST be wrapped in exact <<<<<<< CREATE and >>>>>>> CREATE markers, following this format:
+
+```text
+path/to/new_file.ext
+<<<<<<< CREATE
+[complete new file contents]
+>>>>>>> CREATE
+```
+
+
+
+
+
+
+Placeholders like // ...existing code... are strictly forbidden. You must output the COMPLETE, runnable code within every REPLACE block line-for-line. Assume a dumb automated parser will break if these rules are violated.
+
+
+
+
+All updates to existing files MUST use the exact <<<<<<< SEARCH / ======= / >>>>>>> REPLACE block format. The format template is:
+```text
+path/to/existing_file.ext
+<<<<<<< SEARCH
+[exact existing code]
+=======
+[new replacement code]
+>>>>>>> REPLACE
+```
+```text
+path/to/existing_file.ext
+<<<<<<< SEARCH
+[exact existing code]
+=======
+[new replacement code]
+>>>>>>> REPLACE
+```
